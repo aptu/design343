@@ -7,10 +7,10 @@
 #include <fstream>
 using namespace std;
 
-class TransactionExecutor {
+class TransactionFactory {
 public:
-	TransactionExecutor();
-	~TransactionExecutor();
+    TransactionFactory();
+	~TransactionFactory();
 	void readCommandSequence();
 	void process(Borrow *e);
 	void process(Return *e);
@@ -18,6 +18,6 @@ public:
 	void process(Inventory *e);
 	bool searchInventory(char type, string identifier); // identifier can be a director or title
 private:
-	Transaction *transactions;	// array of transactions
+	Transaction* transactions;	// array of transactions
 	System& store;	// reference to store
 };

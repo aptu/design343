@@ -9,7 +9,7 @@
 class Transaction {
 public:
 	Transaction();
-	bool validID() const;	// returns true if ID exists on account list
+	bool validID() const;
 	virtual bool process();
 private:
 	int accountID;

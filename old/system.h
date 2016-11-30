@@ -1,7 +1,7 @@
 #include "accountmanager.h"
 #include "hashtable.h"
 #include "bst.h"
-#include "transactionexecutor.h"
+#include "transactionfactory.h"
 #include "item.h"
 #include <string>
 using namespace std;
@@ -18,5 +18,5 @@ public:
 private:
 	AccountManager accounts;		// account manager
 	TransactionExecutor executor;	// transaction manager
-    HashTable<char, BST<Item>> inventory;	// HashTbale of items BSTs (eg., Comedy, Drama, Classic)
+    HashTable<char, BST<Item>> inventory;	// HashTale of items BSTs (eg., Comedy, Drama, Classic)
 };	
