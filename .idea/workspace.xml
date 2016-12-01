@@ -12,37 +12,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d3c1be2-2a2a-4d3c-bf1e-3258d6e7f4ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/borrow.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/borrow.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/history.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/history.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/main.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/return.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/return.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/show.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/show.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/current/transaction.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/old/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/account.h" afterPath="$PROJECT_DIR$/old/account.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/accountmanager.h" afterPath="$PROJECT_DIR$/old/accountmanager.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/borrow.h" afterPath="$PROJECT_DIR$/old/borrow.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bst.h" afterPath="$PROJECT_DIR$/old/bst.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/classic.h" afterPath="$PROJECT_DIR$/old/classic.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/comedy.h" afterPath="$PROJECT_DIR$/old/comedy.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/drama.h" afterPath="$PROJECT_DIR$/old/drama.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/hashtable.h" afterPath="$PROJECT_DIR$/old/hashtable.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/history.h" afterPath="$PROJECT_DIR$/old/history.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/inventory.h" afterPath="$PROJECT_DIR$/old/inventory.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/item.h" afterPath="$PROJECT_DIR$/old/item.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/old/main.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/movie.h" afterPath="$PROJECT_DIR$/old/movie.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/return.h" afterPath="$PROJECT_DIR$/old/return.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/system.h" afterPath="$PROJECT_DIR$/old/system.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/transaction.h" afterPath="$PROJECT_DIR$/old/transaction.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/transactionexecutor.h" afterPath="$PROJECT_DIR$/old/transactionfactory.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-    </list>
+    <list default="true" id="9d3c1be2-2a2a-4d3c-bf1e-3258d6e7f4ec" name="Default" comment="" />
     <ignored path="design343.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,6 +51,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/current/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="history.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/old/history.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="borrow.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="borrow.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/current/borrow.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -126,16 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transaction.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/current/transaction.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -462,12 +432,12 @@
       <option name="presentableId" value="Default" />
       <updated>1479936375460</updated>
       <workItem from="1479936378796" duration="770000" />
-      <workItem from="1480474033092" duration="2539000" />
+      <workItem from="1480474033092" duration="2693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3309000" />
+    <option name="totallyTimeSpent" value="3463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="655" y="23" width="625" height="704" extended-state="0" />
@@ -644,14 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/current/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/current/return.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -734,6 +696,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/current/borrow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/current/history.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -742,10 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/current/borrow.cpp">
+    <entry file="file://$PROJECT_DIR$/current/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
