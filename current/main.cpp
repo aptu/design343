@@ -7,11 +7,16 @@ void buildCustomers();
 void processTrans();
 
 int main(){
-    ifstream movieFile;
-    movieFile.open("current/data4movies.txt");
     string line;
-    getline(movieFile, line);
-    cout << "LINE" << line << endl;
+    ifstream movieFile("/Users/olga/workspace/school/repos/design343/current/data4customers.txt");
+    if (movieFile.is_open()) {
+        while (getline (movieFile,line)) {
+            cout << line << '\n';
+        }
+        movieFile.close();
+    } else {
+        cout << "File not open 4" << endl;
+    }
     buildMovies();
     buildCustomers();
     processTrans();
