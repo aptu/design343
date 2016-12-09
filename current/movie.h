@@ -13,7 +13,7 @@ public:
     virtual void setData();
     virtual void display();
     virtual void borrow();
-    virtual void turnin(); // because return is a keyword
+    virtual void turnIn(); // because return is a keyword
 
 protected:
     // constructor

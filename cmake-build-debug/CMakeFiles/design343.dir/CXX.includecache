@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/olga/workspace/school/repos/design343/current/customer.h
+
+/Users/olga/workspace/school/repos/design343/current/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+sstream
+-
+customer.h
+/Users/olga/workspace/school/repos/design343/current/customer.h
+
