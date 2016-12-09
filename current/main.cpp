@@ -15,7 +15,7 @@ int main(){
         }
         movieFile.close();
     } else {
-        cout << "File not open 4" << endl;
+        cout << "File not open 2323" << endl;
     }
     buildMovies();
     buildCustomers();

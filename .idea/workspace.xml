@@ -14,39 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3c1be2-2a2a-4d3c-bf1e-3258d6e7f4ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/current/main.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/design343.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/design343" afterPath="$PROJECT_DIR$/cmake-build-debug/design343" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/current/main.cpp" afterPath="$PROJECT_DIR$/current/main.cpp" />
     </list>
     <ignored path="design343.iws" />
@@ -81,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/current/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -478,12 +445,12 @@
       <workItem from="1480915218854" duration="7000" />
       <workItem from="1480984665432" duration="378000" />
       <workItem from="1481142293825" duration="303000" />
-      <workItem from="1481308973105" duration="3073000" />
+      <workItem from="1481308973105" duration="3113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7224000" />
+    <option name="totallyTimeSpent" value="7264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1604" y="-190" width="1309" height="704" extended-state="0" />
@@ -902,7 +869,7 @@
     <entry file="file://$PROJECT_DIR$/current/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
