@@ -13,10 +13,11 @@ public:
     virtual void setData();
     virtual void display();
     virtual void borrow();
-    virtual void turnin(); // because teturn is a keyword
+    virtual void turnin(); // because return is a keyword
 
 protected:
     // constructor
+    // TODO: why is the year an unsigned int?
     Movie(int stock, string director, string title, unsigned int year)
         : stock(stock),
           director(director),
