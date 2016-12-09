@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/Users/olga/workspace/school/repos/design343/current/customer.cpp
+customer.h
 /Users/olga/workspace/school/repos/design343/current/customer.h
+
+/Users/olga/workspace/school/repos/design343/current/customer.h
+iostream
+-
 
 /Users/olga/workspace/school/repos/design343/current/main.cpp
 iostream

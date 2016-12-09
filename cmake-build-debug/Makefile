@@ -123,6 +123,33 @@ design343/fast:
 	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/build
 .PHONY : design343/fast
 
+current/customer.o: current/customer.cpp.o
+
+.PHONY : current/customer.o
+
+# target to build an object file
+current/customer.cpp.o:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/customer.cpp.o
+.PHONY : current/customer.cpp.o
+
+current/customer.i: current/customer.cpp.i
+
+.PHONY : current/customer.i
+
+# target to preprocess a source file
+current/customer.cpp.i:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/customer.cpp.i
+.PHONY : current/customer.cpp.i
+
+current/customer.s: current/customer.cpp.s
+
+.PHONY : current/customer.s
+
+# target to generate assembly for a file
+current/customer.cpp.s:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/customer.cpp.s
+.PHONY : current/customer.cpp.s
+
 current/main.o: current/main.cpp.o
 
 .PHONY : current/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... design343"
+	@echo "... current/customer.o"
+	@echo "... current/customer.i"
+	@echo "... current/customer.s"
 	@echo "... current/main.o"
 	@echo "... current/main.i"
 	@echo "... current/main.s"

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/olga/workspace/school/repos/design343/current/customer.cpp" "/Users/olga/workspace/school/repos/design343/cmake-build-debug/CMakeFiles/design343.dir/current/customer.cpp.o"
   "/Users/olga/workspace/school/repos/design343/current/main.cpp" "/Users/olga/workspace/school/repos/design343/cmake-build-debug/CMakeFiles/design343.dir/current/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
