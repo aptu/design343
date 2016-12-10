@@ -2,6 +2,7 @@
 #define MOVIE_H
 
 #include <string>
+#include <iostream>
 using namespace std;
 
 /*
@@ -12,6 +13,16 @@ using namespace std;
 class Movie {
 
 public:
+
+    // Input and outputstream
+    friend istream &operator >> ( istream &in,        Movie & rhs) {
+        in >> rhs.director >> rhs.title >> rhs.year;
+    }
+
+    friend ostream &operator << ( ostream &out, const Movie &rhs) {
+        out << rhs.director << ' ' << rhs.title << ' ' << rhs.year << endl;
+    }
+
     virtual Movie operator < (const Movie& rhs) const;
     virtual Movie operator ==(const Movie& rhs) const;
     virtual void setData();
@@ -22,7 +33,7 @@ public:
 protected:
     // constructor
     // TODO: why is the year an unsigned int?
-    Movie(int stock, string director, string title, unsigned int year)
+    Movie(int stock, string director, string title, int year)
         : stock(stock),
           director(director),
           title(title),
@@ -33,7 +44,7 @@ private:
     int stock;
     string director;
     string title;
-    unsigned int year;
+    int year;
 };
 
 #endif // MOVIE_H

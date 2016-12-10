@@ -4,6 +4,11 @@
 #include <sstream>
 #include "customer.h"
 #include "hashTable.h"
+#include "movie.h"
+#include "classic.h"
+#include "comedy.h"
+#include "drama.h"
+
 
 HashTable<int, Customer> customerHashTable;
 
@@ -34,6 +39,7 @@ void processTrans() {
 
 }
 
+
 void buildCustomers() {
     string line;
     ifstream customerFile("/Users/olga/workspace/school/repos/design343/current/data4customers.txt");
@@ -62,6 +68,11 @@ void buildMovies() {
             tokens = split(line, ',');
             switch(tolower(*tokens[0].c_str())){
                 case 'c':
+                //extract actor, month, year for constructing Classic movie
+                vector<string> data = split(tokens[4], ' ');
+                string actor = data[0]+ ' ' + data[1];
+                Classic cl(atoi(tokens[1].c_str()), tokens[2], tokens[3],
+                        actor, atoi(data[2].c_str()), atoi(data[3].c_str()));
                     continue;
                 case 'f':
                     continue;
