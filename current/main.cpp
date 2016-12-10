@@ -7,6 +7,7 @@
 
 HashTable<int, Customer> customerHashTable;
 
+
 void buildMovies();
 void buildCustomers();
 void processTrans();
@@ -42,7 +43,7 @@ void buildCustomers() {
             tokens = split(line, ' ');
             int id = stoi(tokens[0]);
             Customer c(id, tokens[1], tokens[2]);
-          //  customerHashTable.put(id, c);
+            customerHashTable.put(id, c);
         }
         customerFile.close();
     } else {
@@ -59,14 +60,22 @@ void buildMovies() {
     if (movieFile.is_open()) {
         while (getline (movieFile,line)) {
             tokens = split(line, ',');
+            switch(tolower(*tokens[0].c_str())){
+                case 'c':
+                    continue;
+                case 'f':
+                    continue;
+                case 'd':
+                    continue;
+                default:
+                    cout << "INVALID CHAR " <<  *tokens[0].c_str() << endl;
+                    continue;
+            }
 
-        }
-        for(std::vector<string>::iterator it = tokens.begin(); it != tokens.end(); ++it) {
-            std::cout << *it << endl;
         }
         movieFile.close();
     } else {
-        cerr << "Could not open customer file" << endl;
+        cerr << "Could not open movie file" << endl;
         exit(1);
     }
 

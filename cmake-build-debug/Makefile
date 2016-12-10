@@ -123,6 +123,33 @@ design343/fast:
 	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/build
 .PHONY : design343/fast
 
+current/BST/binTree.o: current/BST/binTree.cpp.o
+
+.PHONY : current/BST/binTree.o
+
+# target to build an object file
+current/BST/binTree.cpp.o:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/BST/binTree.cpp.o
+.PHONY : current/BST/binTree.cpp.o
+
+current/BST/binTree.i: current/BST/binTree.cpp.i
+
+.PHONY : current/BST/binTree.i
+
+# target to preprocess a source file
+current/BST/binTree.cpp.i:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/BST/binTree.cpp.i
+.PHONY : current/BST/binTree.cpp.i
+
+current/BST/binTree.s: current/BST/binTree.cpp.s
+
+.PHONY : current/BST/binTree.s
+
+# target to generate assembly for a file
+current/BST/binTree.cpp.s:
+	$(MAKE) -f CMakeFiles/design343.dir/build.make CMakeFiles/design343.dir/current/BST/binTree.cpp.s
+.PHONY : current/BST/binTree.cpp.s
+
 current/customer.o: current/customer.cpp.o
 
 .PHONY : current/customer.o
@@ -186,6 +213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... design343"
+	@echo "... current/BST/binTree.o"
+	@echo "... current/BST/binTree.i"
+	@echo "... current/BST/binTree.s"
 	@echo "... current/customer.o"
 	@echo "... current/customer.i"
 	@echo "... current/customer.s"

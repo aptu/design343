@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/olga/workspace/school/repos/design343/current/BST/binTree.cpp">
+			<Option target="design343"/>
+		</Unit>
+		<Unit filename="/Users/olga/workspace/school/repos/design343/current/BST/binTree.h">
+			<Option target="design343"/>
+		</Unit>
 		<Unit filename="/Users/olga/workspace/school/repos/design343/current/customer.cpp">
 			<Option target="design343"/>
 		</Unit>
