@@ -2,8 +2,12 @@
 #define MOVIE_H
 
 #include <string>
-
 using namespace std;
+
+/*
+ * Movie class is a base class for different types of Movies.
+ * Movie class defines the general behavior of its subclasses.
+ */
 
 class Movie {
 
