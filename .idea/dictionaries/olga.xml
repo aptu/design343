@@ -4,6 +4,7 @@
       <w>customerhashtable</w>
       <w>firstname</w>
       <w>lastname</w>
+      <w>templatized</w>
     </words>
   </dictionary>
 </component>

@@ -14,6 +14,12 @@ customer.h
 iostream
 -
 
+/Users/olga/workspace/school/repos/design343/current/hashTable.cpp
+hashTable.h
+/Users/olga/workspace/school/repos/design343/current/hashTable.h
+
+/Users/olga/workspace/school/repos/design343/current/hashTable.h
+
 /Users/olga/workspace/school/repos/design343/current/main.cpp
 iostream
 -
@@ -25,4 +31,6 @@ sstream
 -
 customer.h
 /Users/olga/workspace/school/repos/design343/current/customer.h
+hashTable.h
+/Users/olga/workspace/school/repos/design343/current/hashTable.h
 
