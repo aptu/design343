@@ -8,7 +8,9 @@ CMakeFiles/design343.dir/current/BST/binTree.cpp.o: ../current/movie.h
 CMakeFiles/design343.dir/current/customer.cpp.o: ../current/customer.cpp
 CMakeFiles/design343.dir/current/customer.cpp.o: ../current/customer.h
 
+CMakeFiles/design343.dir/current/main.cpp.o: ../current/BST/binTree.h
 CMakeFiles/design343.dir/current/main.cpp.o: ../current/customer.h
 CMakeFiles/design343.dir/current/main.cpp.o: ../current/hashTable.h
 CMakeFiles/design343.dir/current/main.cpp.o: ../current/main.cpp
+CMakeFiles/design343.dir/current/main.cpp.o: ../current/movie.h
 
