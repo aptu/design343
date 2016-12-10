@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/olga/workspace/school/repos/design343/current/BST/binTree.cpp
+binTree.h
+/Users/olga/workspace/school/repos/design343/current/BST/binTree.h
+
+/Users/olga/workspace/school/repos/design343/current/BST/binTree.h
+iostream
+-
+../movie.h
+/Users/olga/workspace/school/repos/design343/current/movie.h
+
 /Users/olga/workspace/school/repos/design343/current/customer.cpp
 customer.h
 /Users/olga/workspace/school/repos/design343/current/customer.h
@@ -29,4 +39,8 @@ customer.h
 /Users/olga/workspace/school/repos/design343/current/customer.h
 hashTable.h
 /Users/olga/workspace/school/repos/design343/current/hashTable.h
+
+/Users/olga/workspace/school/repos/design343/current/movie.h
+string
+-
 

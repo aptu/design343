@@ -5,8 +5,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
-#include "nodedata.h"
-
+#include "../movie.h"
 using namespace std;
 
 #ifndef BINTREE_H
@@ -23,16 +22,16 @@ public:
     bool operator==(const BinTree&) const;
     bool operator!=(const BinTree&) const;
     friend ostream& operator<<(ostream& output, const BinTree& b);
-    bool insert(NodeData* data);
-    bool retrieve(const NodeData&, NodeData*&) const;
+    bool insert(Movie* movie);
+    bool retrieve(const Movie&, Movie*&) const;
     void displaySideways() const;            // provided below, displays the tree sideways
-    void bstreeToArray(NodeData**);
-    void arrayToBSTree(NodeData**);
-    int getHeight(const NodeData&) const;
+    void bstreeToArray(Movie**);
+    void arrayToBSTree(Movie**);
+    int getHeight(const Movie&) const;
 
 private:
     struct Node {
-        NodeData* data;                        // pointer to data object
+        Movie* movie;                        // pointer to data object
         Node* left;                            // left subtree pointer
         Node* right;                        // right subtree pointer
     };
@@ -41,16 +40,16 @@ private:
 // utility functions
     void inorderHelper(Node* node) const;
     void sideways(Node*, int) const;            // provided below, helper for displaySideways()
-    bool insertHelper(Node* node, NodeData* data);
-    bool retrieveHelper(Node* node, const NodeData& data, NodeData*& found) const;
+    bool insertHelper(Node* node, Movie* data);
+    bool retrieveHelper(Node* node, const Movie& data, Movie*& found) const;
     bool equalityHelper(BinTree::Node* node, BinTree::Node* rhsNode) const;
-    Node* makeNewNode(NodeData* data);
+    Node* makeNewNode(Movie* data);
     void copyHelper(BinTree::Node*& node, BinTree::Node* pNode);
     void makeEmptyHelper(Node*& node);
-    void bstreeToArrayHelper(Node* node, NodeData** array, int& subscript);
-    void arrayToBSTree(NodeData** array, Node*& leaf, int low, int high);
+    void bstreeToArrayHelper(Node* node, Movie** array, int& subscript);
+    void arrayToBSTree(Movie** array, Node*& leaf, int low, int high);
     int maxDepth(const Node* node, int level) const;
-    int getHeightHelper(const NodeData& data, Node* node, int level, Node*& found) const;
+    int getHeightHelper(const Movie& data, Node* node, int level, Node*& found) const;
 };
 
 #endif

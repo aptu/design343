@@ -1,8 +1,4 @@
 // ------------------------------------------------ binTree.cpp -------------------------------------------------------
-// Olga Rocheeva CSS343 Fall 2016
-// Creation Date 10/18/16
-// Date of Last Modification 10/22/16
-//
 // binTree is the implementation of a binary search tree.
 // Default constructor creates an empty tree. There is also a copy constructor, which makes a deep copy of given tree.
 // Methods implemented are:
@@ -64,7 +60,7 @@ BinTree& BinTree::operator=(const BinTree& rhs) {
  */
 void BinTree::copyHelper(Node*& node, Node* otherNode) {
     if (otherNode != NULL) {
-        node = makeNewNode(otherNode->data);
+        node = makeNewNode(otherNode->movie);
         copyHelper(node->left, otherNode->left);
         copyHelper(node->right, otherNode->right);
     }
@@ -95,7 +91,7 @@ bool BinTree::equalityHelper(Node* node, Node* rhsNode) const {
     }
 
     // check if data is the same and recursively call method for left and right side
-    return node->data == rhsNode->data
+    return node->movie == rhsNode->movie
            && equalityHelper(node->left, rhsNode->left)
            && equalityHelper(node->right, rhsNode->right);
 }
@@ -136,7 +132,8 @@ ostream& operator<<(ostream& output, const BinTree& b) {
 void BinTree::inorderHelper(Node* node) const {
     if (node != NULL) {
         inorderHelper(node->left);
-        cout << *node->data << " ";
+        // TODO: implement printing movie
+       // cout << *node->movie << " ";
         inorderHelper(node->right);
     }
 }
@@ -159,14 +156,14 @@ void BinTree::inorderHelper(Node* node) const {
         /
        Z
 **/
-int BinTree::getHeight(const NodeData& data) const {
+int BinTree::getHeight(const Movie& movie) const {
     if (isEmpty()) {
         return 0;
     }
 
     Node* found = NULL;
     // find how far down from root data is
-    int level = getHeightHelper(data, root, 0, found);
+    int level = getHeightHelper(movie, root, 0, found);
     if (level == -1) {
         return 0;
     } else {
@@ -185,24 +182,24 @@ int BinTree::getHeight(const NodeData& data) const {
  * @param found is a Node passed by reference if it's in tree
  * @return how far down from root the node is, if it is found. otherwise -1 if not found.
  */
-int BinTree::getHeightHelper(const NodeData& data, Node* node, int level, Node*& found) const {
+int BinTree::getHeightHelper(const Movie& movie, Node* node, int level, Node*& found) const {
     if (node == NULL) {
         return -1;
     }
-    if (*node->data == data) {
-        found = node;
-        return level;
-    } else {
-        // look in left subtree
-        level = getHeightHelper(data, node->left, level + 1, found);
-        // if found, return the level
-        if (level != -1) {
-            return level;
-        }
-        // otherwise traverse the right subtree
-        level = getHeightHelper(data, node->right, level + 1, found);
-        return level;
-    }
+//    if (*node->movie == movie) {
+//        found = node;
+//        return level;
+//    } else {
+//        // look in left subtree
+//        level = getHeightHelper(movie, node->left, level + 1, found);
+//        // if found, return the level
+//        if (level != -1) {
+//            return level;
+//        }
+//        // otherwise traverse the right subtree
+//        level = getHeightHelper(movie, node->right, level + 1, found);
+//        return level;
+//    }
 }
 
 /**
@@ -232,7 +229,7 @@ int BinTree::maxDepth(const Node* node, int level) const {
  * Places binTree into an array.
  * @param array to place binTree into. Passed by reference.
  */
-void BinTree::bstreeToArray(NodeData* array[]) {
+void BinTree::bstreeToArray(Movie* array[]) {
     int subscript = 0;
     bstreeToArrayHelper(root, array, subscript);
     makeEmpty(); // clear tree after placing into array
@@ -244,10 +241,10 @@ void BinTree::bstreeToArray(NodeData* array[]) {
  * @param array to place binTrees into
  * @param subscript location of where to place node in array
  */
-void BinTree::bstreeToArrayHelper(Node* node, NodeData* array[], int& subscript) {
+void BinTree::bstreeToArrayHelper(Node* node, Movie* array[], int& subscript) {
     if (node != NULL) {
         bstreeToArrayHelper(node->left, array, subscript);
-        array[subscript] = node->data;
+        array[subscript] = node->movie;
         subscript++;
         bstreeToArrayHelper(node->right, array, subscript);
     }
@@ -258,7 +255,7 @@ void BinTree::bstreeToArrayHelper(Node* node, NodeData* array[], int& subscript)
  * and high is the highest.
  * @param array to use to create binTree out of
  */
-void BinTree::arrayToBSTree(NodeData* array[]) {
+void BinTree::arrayToBSTree(Movie* array[]) {
     int i = 0;
     // Find where the values of the array end
     while (array[i] != NULL) {
@@ -282,7 +279,7 @@ void BinTree::arrayToBSTree(NodeData* array[]) {
  * @param low is the low subscript
  * @param high is the high subscript
  */
-void BinTree::arrayToBSTree(NodeData* array[], Node*& node, int low, int high) {
+void BinTree::arrayToBSTree(Movie* array[], Node*& node, int low, int high) {
     // Recursively called until low is larger than high
     if (low <= high) {
         // find mid point to make root node from
@@ -298,12 +295,12 @@ void BinTree::arrayToBSTree(NodeData* array[], Node*& node, int low, int high) {
  * @param data to insert
  * @return true if inserted (not a duplicate value)
  */
-bool BinTree::insert(NodeData* data) {
+bool BinTree::insert(Movie* movie) {
     if (root == NULL) {
-        root = makeNewNode(data);
+        root = makeNewNode(movie);
         return true;
     }
-    return insertHelper(root, data);
+    return insertHelper(root, movie);
 }
 
 /**
@@ -312,30 +309,30 @@ bool BinTree::insert(NodeData* data) {
  * @param data to insert
  * @return true if inserted (not a duplicate value)
  */
-bool BinTree::insertHelper(Node* node, NodeData* data) {
-    // Discard duplicates. Dereferenced to compare data instead of memory locations.
-    if (*data == *node->data) {
-        return false;
-    }
-    // Check if data goes left
-    if (*data < *node->data) {
-        // if there is nothing to the left, this is where node is made
-        if (node->left == NULL) {
-            node->left = makeNewNode(data);
-        } else {
-            // otherwise keep traversing left
-            insertHelper(node->left, data);
-        }
-        // Check if data goes right
-    } else if (*data > *node->data) {
-        // if there is nothing to the right, this is where node is made
-        if (node->right == NULL) {
-            node->right = makeNewNode(data);
-        } else {
-            // otherwise keep traversing right
-            insertHelper(node->right, data);
-        }
-    }
+bool BinTree::insertHelper(Node* node, Movie* movie) {
+//    // Discard duplicates. Dereferenced to compare data instead of memory locations.
+//    if (*movie == *node->movie) {
+//        return false;
+//    }
+//    // Check if data goes left
+//    if (*movie < *node->movie) {
+//        // if there is nothing to the left, this is where node is made
+//        if (node->left == NULL) {
+//            node->left = makeNewNode(movie);
+//        } else {
+//            // otherwise keep traversing left
+//            insertHelper(node->left, movie);
+//        }
+//        // Check if data goes right
+//    } else if (*movie > *node->movie) {
+//        // if there is nothing to the right, this is where node is made
+//        if (node->right == NULL) {
+//            node->right = makeNewNode(movie);
+//        } else {
+//            // otherwise keep traversing right
+//            insertHelper(node->right, movie);
+//        }
+//    }
     return true;
 }
 
@@ -345,10 +342,10 @@ bool BinTree::insertHelper(Node* node, NodeData* data) {
  * @param found is returned by reference, is garbage if not found
  * @return true if data is in tree
  */
-bool BinTree::retrieve(const NodeData& data, NodeData*& found) const {
+bool BinTree::retrieve(const Movie& movie, Movie*& found) const {
     if (!isEmpty()) {
         found = NULL; // make sure found isn't carrying data without finding in tree.
-        return retrieveHelper(root, data, found);
+        return retrieveHelper(root, movie, found);
     }
 }
 
@@ -359,22 +356,23 @@ bool BinTree::retrieve(const NodeData& data, NodeData*& found) const {
  * @param found is returned by reference, is garbage if not found
  * @return true if data is in tree
  */
-bool BinTree::retrieveHelper(Node* node, const NodeData& data, NodeData*& found) const {
-    // if node is null, value is not found
-    if (node == NULL) {
-        return false;
-    }
-    // pass value back by reference if found
-    if (*node->data == data) {
-        found = node->data;
-        return true;
-        // traverse right if larger
-    } else if (*node->data < data) {
-        return retrieveHelper(node->right, data, found);
-        // traverse left if smaller
-    } else if (*node->data > data) {
-        return retrieveHelper(node->left, data, found);
-    }
+bool BinTree::retrieveHelper(Node* node, const Movie& movie, Movie*& found) const {
+//    // if node is null, value is not found
+//    if (node == NULL) {
+//        return false;
+//    }
+//    // pass value back by reference if found
+//    if (*node->movie == movie) {
+//        found = node->movie;
+//        return true;
+//        // traverse right if larger
+//     } else if (*node->movie < movie) {
+//        return retrieveHelper(node->right, movie, found);
+//        // traverse left if smaller
+//    } else if (*node->movie > movie) {
+//        return retrieveHelper(node->left, movie, found);
+//    }
+    return false;
 }
 
 //------------------------- displaySideways ---------------------------------
@@ -399,8 +397,8 @@ void BinTree::sideways(Node* current, int level) const {
         for (int i = level; i >= 0; i--) {
             cout << "    ";
         }
-
-        cout << *current->data << endl;        // display information of object
+        // TODO: Implement printing Movie
+       // cout << *current->movie << endl;        // display information of object
         sideways(current->left, level);
     }
 }
@@ -410,9 +408,9 @@ void BinTree::sideways(Node* current, int level) const {
  * @param data to put into node
  * @return node
  */
-BinTree::Node* BinTree::makeNewNode(NodeData* data) {
+BinTree::Node* BinTree::makeNewNode(Movie* movie) {
     Node* node = new Node();
-    node->data = data;
+    node->movie = movie;
     node->left = NULL;
     node->right = NULL;
 
