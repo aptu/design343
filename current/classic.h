@@ -7,24 +7,24 @@ class Classic : public Movie {
 
 public:
 
-    // Input and outputstream
-    friend istream &operator >> ( istream &in,        Classic & rhs);
-    friend ostream &operator << ( ostream &out, const Classic &rhs);
+    // Input and output stream
+    friend istream &operator>>(istream &in, Classic & rhs);
+    friend ostream &operator<<(ostream &out, const Classic &rhs);
 
-    bool operator ==(const Classic& rhs) const;
-    bool operator < (const Classic& rhs) const;
-    bool operator > (const Classic& rhs) const;
+    bool operator==(const Classic& rhs) const;
+    bool operator<(const Classic& rhs) const;
+    bool operator>(const Classic& rhs) const;
 
 
     void setData();
     void display();
     void borrow();
-    void turnin();
+    void turnIn();
 
 
     //========================== Constructor ======================================
     /*
-     * Constructor creates a Comedy movie.
+     * Constructor creates a Classic movie.
      * It takes the following arguments:
      * -- stock number
      * -- director
@@ -45,11 +45,12 @@ public:
     ~Classic() {}
 
 private:
+    int stock;
+    string director;
+    string title;
     string actor;
-    int year;
     int month;
-
-
+    int year;
 };
 
 

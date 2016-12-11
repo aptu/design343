@@ -46,10 +46,7 @@ ostream& operator << ( ostream &out, const Classic &rhs) {
  * -- Stanley Kubrick, A Clockwork Orange, Malcolm McDowell 2 1971
  */
 bool Classic::operator ==(const Classic& rhs) const {
-    if (this->year == rhs.year && this->month == rhs.month && this->actor == rhs.actor) {
-            return true;
-    }
-    return false;
+    return this->year == rhs.year && this->month == rhs.month && this->actor == rhs.actor;
 }
 
 /*
@@ -63,10 +60,7 @@ bool Classic::operator ==(const Classic& rhs) const {
  *          to define less than relation.
  */
 bool Classic::operator < (const Classic& rhs) const {
-    if (this->year < rhs.year && this->month < rhs.month && this->actor < rhs.actor) {
-            return true;
-    }
-    return false;
+    return this->year < rhs.year && this->month < rhs.month && this->actor < rhs.actor;
 }
 
 /*
@@ -80,14 +74,11 @@ bool Classic::operator < (const Classic& rhs) const {
  *          to define greater than relation.
  */
 bool Classic::operator > (const Classic& rhs) const {
-    if (this->year > rhs.year && this->month > rhs.month && this->actor > rhs.actor) {
-            return true;
-    }
-    return false;
+    return this->year > rhs.year && this->month > rhs.month && this->actor > rhs.actor;
 }
 
 /*
- * I AM NOT SURE WHAT TO SEY HERE YET
+ *TODO: I AM NOT SURE WHAT TO SAY HERE YET
  */
 void Classic::setData() {
 
@@ -119,6 +110,6 @@ void Classic::borrow() {
 /*
  *
  */
-void Classic::turnin() {
+void Classic::turnIn() {
 
 }

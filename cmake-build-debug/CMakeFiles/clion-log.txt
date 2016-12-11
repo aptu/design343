@@ -1,4 +1,11 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/olga/workspace/school/repos/design343
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/olga/workspace/school/repos/design343/cmake-build-debug
+-- Could NOT find PkgConfig (missing:  PKG_CONFIG_EXECUTABLE) 
+-- Checking for one of the modules 'cppunit'
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.6/Modules/FindPkgConfig.cmake:646 (message):
+  None of the required 'cppunit' found
+Call Stack (most recent call first):
+  tests/CMakeLists.txt:6 (pkg_search_module)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/olga/workspace/school/repos/design343/cmake-build-debug/CMakeFiles/CMakeOutput.log".
