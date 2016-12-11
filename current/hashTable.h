@@ -20,6 +20,7 @@ private:
 
 template<typename K, typename V>
 HashTable<K, V>::HashTable() {
+    for(int i = 0; i < MAX_IDS; i++)
 
 }
 
