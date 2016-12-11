@@ -5,14 +5,14 @@ using namespace std;
 
 
 
-// Input and outputstream
+// Input and output stream
 /*
  * Overloads the input stream operator to input the
  * Comedy data.
  *
  * Returns a reference to output stream.
  */
-istream &operator >> ( istream &in, Classic & rhs) {
+istream &operator >> (istream &in, Classic & rhs) {
 
 }
 /*
@@ -20,7 +20,7 @@ istream &operator >> ( istream &in, Classic & rhs) {
  * Comedy data.
  * Returns a reference to output stream.
  */
-ostream& operator << ( ostream &out, const Classic &rhs) {
+ostream& operator << (ostream &out, const Classic &rhs) {
     const Movie& movie = rhs;
     out << movie.director << ' '
         << movie.title << ' '
