@@ -8,9 +8,12 @@
 #include "classic.h"
 #include "comedy.h"
 #include "drama.h"
-
+#include "BST/binTree.h"
 
 HashTable<int, Customer> customerHashTable;
+BinTree comedyTree;
+BinTree classicTree;
+BinTree dramaTree;
 
 
 void buildMovies();
@@ -59,10 +62,16 @@ void buildCustomers() {
 
 }
 
+/**
+* For comedy movies: F, Stock, Director, Title, Year it released
+* For drama movies: D, Stock, Director, Title, Year it released
+* For classics movies: C, Stock, Director, Title, Major actor Release date
+ */
 void buildMovies() {
     string line;
     ifstream movieFile("/Users/olga/workspace/school/repos/design343/current/data4movies.txt");
     vector<string> tokens;
+    vector<string> lastField;
     if (movieFile.is_open()) {
         while (getline (movieFile,line)) {
             tokens = split(line, ',');
@@ -79,7 +88,7 @@ void buildMovies() {
                 case 'd':
                     continue;
                 default:
-                    cout << "INVALID CHAR " <<  *tokens[0].c_str() << endl;
+                    cout << "INVALID MOVIE TYPE " <<  *tokens[0].c_str() << endl;
                     continue;
             }
 
