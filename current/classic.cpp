@@ -1,6 +1,7 @@
 #include "classic.h"
 #include <iostream>
 using namespace std;
+#include "movie.h"
 
 
 
@@ -8,7 +9,7 @@ using namespace std;
 // Input and output stream
 /*
  * Overloads the input stream operator to input the
- * Comedy data.
+ * Classic data.
  *
  * Returns a reference to output stream.
  */
@@ -17,13 +18,12 @@ istream &operator >> (istream &in, Classic & rhs) {
 }
 /*
  * Overloads the outoutstream operator to output the
- * Comedy data.
+ * Classic data.
  * Returns a reference to output stream.
  */
 ostream& operator << (ostream &out, const Classic &rhs) {
     const Movie& movie = rhs;
-    out << movie.director << ' '
-        << movie.title << ' '
+    out << movie << ' '
         << rhs.actor << ' '
         << rhs.month << ' '
         << rhs.year
@@ -60,7 +60,29 @@ bool Classic::operator ==(const Classic& rhs) const {
  *          to define less than relation.
  */
 bool Classic::operator < (const Classic& rhs) const {
-    return this->year < rhs.year && this->month < rhs.month && this->actor < rhs.actor;
+
+    if (this->year < rhs.year) {
+        return true;
+    }
+
+    if (this->year == rhs.year ) {
+        if (this->month < rhs.month) {
+            return true;
+        }
+        else if (this->month == rhs.month) {
+            if (this->actor < rhs.actor) {
+            return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+    else {
+        // this->year > rhs.year
+        return false;
+    }
+
 }
 
 /*
@@ -74,14 +96,15 @@ bool Classic::operator < (const Classic& rhs) const {
  *          to define greater than relation.
  */
 bool Classic::operator > (const Classic& rhs) const {
-    return this->year > rhs.year && this->month > rhs.month && this->actor > rhs.actor;
+    return !(*this == rhs) && !(*this < rhs);
 }
 
 /*
- *TODO: I AM NOT SURE WHAT TO SAY HERE YET
+ *TODO: I AM NOT SURE WHAT TO SAY HERE YET.Construct??? or just edit one field???
+ * I assume that the only field we have to edit is stock for now.
  */
-void Classic::setData() {
-
+void Classic::setData(/*int stock, string director, string title, string actor, int month, int year*/) {
+    Classic classic_movie(int stock, string director, string title, string actor, int month, int year);
 }
 
 
@@ -94,6 +117,20 @@ void Classic::setData() {
  *
  */
 void Classic::display() {
+    cout << *this;
+}
+
+
+/*
+ *
+ */
+void Classic::borrow(int num) {
+    if ( this->stock >= num) {
+        this->stock -= num;
+    }
+    else {
+        cerr << "There are only " << this->stock << "movies called " << this->title << endl;
+    }
 
 }
 
@@ -101,15 +138,6 @@ void Classic::display() {
 /*
  *
  */
-void Classic::borrow() {
-
-
-}
-
-
-/*
- *
- */
-void Classic::turnIn() {
-
+void Comedy::turnIn(int num) {
+    this->stock += num;
 }

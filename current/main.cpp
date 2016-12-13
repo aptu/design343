@@ -77,16 +77,24 @@ void buildMovies() {
             tokens = split(line, ',');
             switch(tolower(*tokens[0].c_str())){
                 case 'c':
+            {
                 //extract actor, month, year for constructing Classic movie
-                vector<string> data = split(tokens[4], ' ');
-                string actor = data[0]+ ' ' + data[1];
-                Classic cl(atoi(tokens[1].c_str()), tokens[2], tokens[3],
-                        actor, atoi(data[2].c_str()), atoi(data[3].c_str()));
+                    vector<string> data = split(tokens[4], ' ');
+                    string actor = data[0]+ ' ' + data[1];
+                    Classic cl(atoi(tokens[1].c_str()), tokens[2], tokens[3],
+                            actor, atoi(data[2].c_str()), atoi(data[3].c_str()));
                     continue;
+            }
                 case 'f':
+            {
+                    Comedy com(atoi(tokens[1].c_str()), tokens[2], tokens[3], atoi(tokens[4].c_str()));
                     continue;
+            }
                 case 'd':
+            {
+                    Drama dr(atoi(tokens[1].c_str()), tokens[2], tokens[3], atoi(tokens[4].c_str()));
                     continue;
+            }
                 default:
                     cout << "INVALID MOVIE TYPE " <<  *tokens[0].c_str() << endl;
                     continue;
@@ -98,5 +106,14 @@ void buildMovies() {
         cerr << "Could not open movie file" << endl;
         exit(1);
     }
+
+
+//TODO: remove
+Classic cl(10, "George Cucor", "Holiday", "Cary Grant", 9, 1938);
+cout << cl;
+Comedy cm(10, "Nora Efron", "You've got mail", 1998);
+cout << cm;
+Drama dr(10, "Steven Spielberg", "List", 1993);
+cout << dr;
 
 }

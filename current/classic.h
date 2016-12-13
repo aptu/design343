@@ -18,8 +18,8 @@ public:
 
     void setData();
     void display();
-    void borrow();
-    void turnIn();
+    void borrow(int num);
+    void turnIn(int num);
 
 
     //========================== Constructor ======================================
@@ -30,6 +30,7 @@ public:
      * -- director
      * -- title
      * -- major actor
+     * -- release month
      * -- release date
      * Release date has the format: Year Month,
      * example: 19389, where 1938 is year, 9 is month.     *

@@ -14,25 +14,18 @@ class Movie {
 
 public:
 
-    // Input and outputstream
-    friend istream &operator >> ( istream &in,        Movie & rhs) {
-        in >> rhs.director >> rhs.title >> rhs.year;
-    }
-
-    friend ostream &operator << ( ostream &out, const Movie &rhs) {
-        out << rhs.director << ' ' << rhs.title << ' ' << rhs.year << endl;
-    }
+    //friend istream &operator >> ( istream &in,       Movie & rhs);
+    friend ostream &operator << ( ostream &out, const Movie &rhs);
 
     virtual Movie operator < (const Movie& rhs) const;
     virtual Movie operator ==(const Movie& rhs) const;
     virtual void setData();
     virtual void display();
-    virtual void borrow();
-    virtual void turnIn(); // because return is a keyword
+    virtual void borrow(int n);
+    virtual void turnIn(int n); // because return is a keyword
 
 protected:
     // constructor
-    // TODO: why is the year an unsigned int?
     Movie(int stock, string director, string title, int year)
         : stock(stock),
           director(director),
@@ -40,11 +33,22 @@ protected:
           year(year)
     {}
 
+    virtual ~Movie() {}
+
 private:
     int stock;
     string director;
     string title;
     int year;
 };
+
+// Input and outputstream
+//istream &operator >> ( istream &in,        Movie & rhs) {
+   // in >> rhs.director >> rhs.title >> rhs.year;
+//}
+
+ostream &operator << ( ostream &out, const Movie &rhs) {
+    out << rhs.director << ' ' << rhs.title << ' ' << rhs.year << endl;
+}
 
 #endif // MOVIE_H
