@@ -1,3 +1,17 @@
 #include "customer.h"
 
-Customer::Customer(int id, string lastName, string firstName): id(id), lastName(lastName), firstName(firstName){}
+void Customer::setCustomer() {
+
+}
+
+void Customer::display() {
+
+}
+
+void Customer::addTransaction() {
+
+}
+
+void Customer::getHistory() {
+
+}
